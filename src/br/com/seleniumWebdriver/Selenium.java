@@ -18,9 +18,7 @@ public class Selenium {
 		// Pesquisar objeto html no formulário por nome 
 		WebElement objetoForm = paginaWeb.findElement(By.name("as_word"));
 		
-		
-		// inserir valor no objeto html
-		objetoForm.sendKeys("Cubo Magico");
+		SeleniumUtils.setElementoPorNome("as_word", "Cubo Magico", paginaWeb);
 		
 		objetoForm.submit();
 
