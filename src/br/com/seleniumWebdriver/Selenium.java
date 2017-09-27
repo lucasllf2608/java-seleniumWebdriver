@@ -1,6 +1,8 @@
 package br.com.seleniumWebdriver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -13,7 +15,14 @@ public class Selenium {
 		
 		paginaWeb.get("https://www.mercadolivre.com.br/");
 		
+		// Pesquisar objeto html no formulário por nome 
+		WebElement objetoForm = paginaWeb.findElement(By.name("as_word"));
 		
+		
+		// inserir valor no objeto html
+		objetoForm.sendKeys("Cubo Magico");
+		
+		objetoForm.submit();
 
 	}
 	
