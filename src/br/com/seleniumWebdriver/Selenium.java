@@ -11,6 +11,9 @@ public class Selenium {
 	public static void main(String[] args) {
 	
 		
+		
+		
+		
 		WebDriver paginaWeb = new FirefoxDriver();
 		
 		paginaWeb.get("https://www.mercadolivre.com.br/");

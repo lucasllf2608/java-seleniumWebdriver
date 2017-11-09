@@ -18,8 +18,17 @@ public class SeleniumUtils {
 	public static void setElementoPorId(String id, String chaveElemento, WebDriver paginaWeb){
 		WebElement objetoForm = paginaWeb.findElement(By.id(id));
 		objetoForm.sendKeys(chaveElemento);
-		System.out.println("Valor "+chaveElemento +" inserido com sucesso no elemento com o nome"+ id );
+		System.out.println("Valor "+chaveElemento +" inserido com sucesso no elemento com o id"+ id );
 	}
+	
+	
+	public static void setElementoPorXpath(String xpath, String chaveElemento, WebDriver paginaWeb){
+		WebElement objetoForm = paginaWeb.findElement(By.xpath(xpath));
+		objetoForm.sendKeys(chaveElemento);
+		System.out.println("Valor "+chaveElemento +" inserido com sucesso no elemento com o xpath"+ xpath);
+		
+	}
+	
 	
 	
 }
